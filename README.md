@@ -2,15 +2,12 @@
 
 A new Flutter project.
 
-## Getting Started
+## Программирование корпаративных систем. Практическая работа №3
 
-This project is a starting point for a Flutter application.
+Жлудов И.А. ЭФБО-03-22
 
-A few resources to get you started if this is your first Flutter project:
+# Приложение
+![image](https://github.com/user-attachments/assets/099f9131-3d55-4006-8164-81eaf807cea6)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/7cd9c8df-685d-46f2-a015-b1958c4322df)
