@@ -1,16 +1,12 @@
-# practice3
+# Practice_4
+Дисциплина: Программирование корпоративных систем
+Семестр: 5
+Выполнил студент ЭФБО-03-22 Жлудов И.А.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Содержание работы
+Вид приложения
+![Снимок экрана 2024-09-29 152739](https://github.com/user-attachments/assets/dee9b5a3-df29-43cd-83d7-1fb4c0d94953)
+![Снимок экрана 2024-09-29 152834](https://github.com/user-attachments/assets/e6cb6250-4a27-445c-b66a-f2bbffeb4ab8)
+![Снимок экрана 2024-09-29 152848](https://github.com/user-attachments/assets/a062f2c9-283d-44ad-8430-93f80a87ae9e)
+![Снимок экрана 2024-09-29 152901](https://github.com/user-attachments/assets/2b35850d-b64c-4fc9-9801-657744776cbd)
+![Снимок экрана 2024-09-29 152918](https://github.com/user-attachments/assets/53eed93a-715a-4358-9c67-0294313cd931)
