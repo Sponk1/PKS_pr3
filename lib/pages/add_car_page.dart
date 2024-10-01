@@ -20,11 +20,11 @@ class _AddCarPageState extends State<AddCarPage> {
     final newCar = Car(
       name: _nameController.text,
       imageUrl: _imageUrlController.text,
-      shortDescription: _shortDescriptionController.text, // Исправлено
+      shortDescription: _shortDescriptionController.text, 
       fullDescription: _fullDescriptionController.text,
     );
     widget.onAddCar(newCar);
-    Navigator.pop(context);  // Возвращение на предыдущий экран
+    Navigator.pop(context); 
   }
 
   @override
