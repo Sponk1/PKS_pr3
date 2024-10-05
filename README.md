@@ -1,16 +1,13 @@
-# practice3
+## Практическая работа №5
 
-A new Flutter project.
+# Выполнил
+>Студент: Жлудов И.А.
+>Группа: ЭФБО-03-22
 
-## Getting Started
+#Скриншоты приложения
+![image](https://github.com/user-attachments/assets/59410d48-8728-47cc-8330-c08822b99233)
+![image](https://github.com/user-attachments/assets/4b005c90-58a2-44e1-b47f-408ec331ff9c)
+![image](https://github.com/user-attachments/assets/a7a7f599-7c1a-43ea-97b0-1941621086ba)
+![image](https://github.com/user-attachments/assets/16c274c8-7d34-49e2-ad15-1835c9750057)
+![image](https://github.com/user-attachments/assets/14ff8ee7-4448-40fb-ab7e-fc1ad8933f4d)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
