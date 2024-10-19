@@ -15,6 +15,7 @@ class _AddCarPageState extends State<AddCarPage> {
   final TextEditingController _imageUrlController = TextEditingController();
   final TextEditingController _shortDescriptionController = TextEditingController();
   final TextEditingController _fullDescriptionController = TextEditingController();
+  final TextEditingController _price = TextEditingController();
 
   void _addCar() {
     final newCar = Car(
@@ -22,6 +23,7 @@ class _AddCarPageState extends State<AddCarPage> {
       imageUrl: _imageUrlController.text,
       shortDescription: _shortDescriptionController.text,
       fullDescription: _fullDescriptionController.text,
+      price: _price.text
     );
     widget.onAddCar(newCar);
     Navigator.pop(context);

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/car.dart';
+import '../models/cart.dart'; // Подключение модели корзины
 import 'car_detail_page.dart';
 import 'add_car_page.dart';
 import 'favorite_page.dart';
 import 'profile_page.dart';
+import 'cart_page.dart'; // Подключение страницы корзины
 
 class CarListPage extends StatefulWidget {
   @override
@@ -15,16 +18,18 @@ class _CarListPageState extends State<CarListPage> {
 
   List<Car> cars = [
     Car(
-        name: 'Toyota Camry',
-        imageUrl: 'https://avatars.mds.yandex.net/get-autoru-vos/6027420/a6a5c00c244f842bbcb329de234b79e1/1200x900',
-        shortDescription: '4 650 000 ₽',
-        fullDescription: 'Toyota Camry, 2024  4 650 000 ₽  Электрорегулировка руля'
+      name: 'Toyota Camry',
+      imageUrl: 'https://avatars.mds.yandex.net/get-autoru-vos/6027420/a6a5c00c244f842bbcb329de234b79e1/1200x900',
+      shortDescription: '4 650 000 ₽',
+      fullDescription: 'Toyota Camry, 2024  4 650 000 ₽  Электрорегулировка руля',
+      price: '4650000',
     ),
     Car(
-        name: 'Land Rover Range Rover D3000 MHEV',
-        imageUrl: 'https://avatars.mds.yandex.net/get-autoru-vos/5519299/5fcb4c8dc82509d0209f94233630d56e/1200x900',
-        shortDescription: '21 498 000 ₽',
-        fullDescription: 'Автомобиль в наличии. Стоит в нашем салоне в г.Москва. НЕ АРАБ. НЕ АМЕРИКАНЕЦ...'
+      name: 'Land Rover Range Rover D3000 MHEV',
+      imageUrl: 'https://avatars.mds.yandex.net/get-autoru-vos/5519299/5fcb4c8dc82509d0209f94233630d56e/1200x900',
+      shortDescription: '21 498 000 ₽',
+      fullDescription: 'Автомобиль в наличии. Стоит в нашем салоне в г.Москва. НЕ АРАБ. НЕ АМЕРИКАНЕЦ...',
+      price: '21498000',
     ),
   ];
 
@@ -125,7 +130,13 @@ class _CarListPageState extends State<CarListPage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => CarDetailPage(car: cars[index]),
+                                    builder: (context) => CarDetailPage(
+                                      car: cars[index],
+                                      onAddToCart: (car) {
+                                        Provider.of<CartModel>(context, listen: false).addToCart(car);
+                                      },
+                                      onAddToFavorites: _toggleFavorite,
+                                    ),
                                   ),
                                 );
                               },
@@ -156,7 +167,7 @@ class _CarListPageState extends State<CarListPage> {
         );
         break;
       case 2:
-        body = ProfilePage();
+        body = ProfilePage() as Widget;
         break;
       default:
         body = Center(child: Text('Unknown Page'));
@@ -166,6 +177,38 @@ class _CarListPageState extends State<CarListPage> {
       appBar: AppBar(
         title: Text('Cars'),
         backgroundColor: Colors.teal,
+        actions: [
+          Stack(
+            children: [
+              IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CartPage()),
+                  );
+                },
+              ),
+              Consumer<CartModel>(
+                builder: (context, cart, child) {
+                  return Positioned(
+                    right: 0,
+                    child: cart.totalItems > 0
+                        ? CircleAvatar(
+                      radius: 10,
+                      backgroundColor: Colors.red,
+                      child: Text(
+                        '${cart.totalItems}',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    )
+                        : SizedBox(),
+                  );
+                },
+              ),
+            ],
+          ),
+        ],
       ),
       body: body,
       bottomNavigationBar: BottomNavigationBar(
